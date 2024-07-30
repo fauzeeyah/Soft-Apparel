@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <div class="announcement-bar">
         <span id="scrolling-text">&lt;&nbsp;&nbsp; Delivery Takes Between 8-12 Days | Express Shipping Available&nbsp;&nbsp;&gt;</span>
@@ -16,23 +15,23 @@
         <nav>
             <div class="nav-left">
                 <ul class="nav-links">
-                    <li><a href="#"><span>Home</span></a></li>
+                    <li><a href="/html folder/home.html"><span>Home</span></a></li>
                     <li class="dropdown">
                         <a href="#"><span>Shop</span></a>
                         <div class="dropdown-content">
-                            <a href="#" onclick="showImages('jilbab')"><span>Jilbabs</span></a>
-                            <a href="#" onclick="showImages('hijabs')"><span>Hijabs</span></a>
-                            <a href="#" onclick="showImages('dresses')"><span>Dresses</span></a>
-                            <a href="#" onclick="showImages('jumpsuite')"><span>Jumpsuits</span></a>
-                            <a href="#" onclick="showImages('bodytop')"><span>Tops</span></a>
-                            <a href="#" onclick="showImages('skirt')"><span>Skirts</span></a>
-                            <a href="#" onclick="showImages('kids')"><span>Kids</span></a>
-                            <a href="#" onclick="showImages('two piece')"><span>Prayer Garments</span></a>
-                            <a href="#" onclick="showImages('giftingOptions')"><span>Gifting Options</span></a>
+                            <a href="/html folder/jilbabs.html"><span>Jilbabs</span></a>
+                            <a href="/html folder/hijabs.html"><span>Hijabs</span></a>
+                            <a href="/html folder/dresses.html"><span>Dresses</span></a>
+                            <a href="/html folder/jumpsuits.html"><span>Jumpsuits</span></a>
+                            <a href="/html folder/tops.html"><span>Tops</span></a>
+                            <a href="/html folder/skirts.html" ><span>Skirts</span></a>
+                            <a href="/html folder/kids.html" ><span>Kids</span></a>
+                            <a href="/html folder/prayer_garments.html"><span>Prayer Garments</span></a>
+                            <a href="/html folder/gifting_options.html"><span>Gifting Options</span></a>
                         </div>
                     </li>
-                    <li><a href="#about-us" onclick="showSection('about-us')"><span>About Us</span></a></li>
-                    <li><a href="#size-guide" onclick="showSection('size-guide')"><span>Size Guide</span></a></li>
+                    <li><a href="/html folder/about_us.html"><span>About Us</span></a></li>
+                    <li><a href="/html folder/size_guide.html"><span>Size Guide</span></a></li>
                 </ul>
             </div>
             <div class="nav-center logo">
@@ -43,27 +42,142 @@
                 <a href="#" id="login-icon" onclick="showLoginForm()"><i class="fa fa-user"></i></a>
                 <a href="#" id="cart-icon">
                     <i class="fa fa-shopping-cart"></i>
-                    <span id="cart-count" class="cart-count">0</span>
+                    <span id="cart-count" class="cart-count"></span>
                 </a>
             </div>
         </nav>
     </header>
     <main>
         <section id="image-display-section" class="image-display"></section>
-    </main>
-    
-        <!-- Cart Section -->
-        <section id="cart" class="cart-section" style="display:none;">
-            <h2>Your Cart</h2>
-            <div id="cart-items"></div>
-            <div id="empty-cart-message" style="display:none;">
-                <p>Your cart is empty</p>
-                <a href="#" onclick="continueShopping()">Continue shopping</a>
-                <p>Have an account? <a href="#" onclick="showLoginForm()">Log in to check out faster.</a></p>
-            </div>
-        </section>
 
-        <section class="about-us" id="about-us" style="display:none;">
+        <main>
+            <section class="image-grid-section"></section>
+                    <h1>Skirts Collection</h1>
+                    <div class="image-grid">
+                    <div class="image-item">
+                    <img src="images/skirt1.jpg" alt="Floral Skirt">
+                    <div class="product-info">
+                        <h2>Floral Skirt</h2>
+                        <p class="description">A beautiful floral skirt perfect for any occasion.</p>
+                        <p class="price">Price: £25</p>
+                        <button class="add-to-cart" data-name="Floral Skirt" data-price="25">Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="image-item">
+                    <img src="images/skirt2.jpg" alt="Pleated Skirt">
+                    <div class="product-info">
+                        <h2>Pleated Skirt</h2>
+                        <p class="description">Elegant pleated skirt for a sophisticated look.</p>
+                        <p class="price">Price: £30</p>
+                        <button class="add-to-cart" data-name="Pleated Skirt" data-price="30">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/skirt3.jpg" alt=" Skirt">
+                    <div class="product-info">
+                        <h2>Two step Skirt</h2>
+                        <p class="description">Two Step skirt for everyday wear.</p>
+                        <p class="price">Price: £35</p>
+                        <button class="add-to-cart" data-name="Skirt" data-price="35">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/skirt4.jpg" alt="Maxi Skirt">
+                    <div class="product-info">
+                        <h2>Maxi Skirt</h2>
+                        <p class="description">Long maxi skirt for a flowy, comfortable fit.</p>
+                        <p class="price">Price: £35</p>
+                        <button class="add-to-cart" data-name="Skirt" data-price="35">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/skirt5.jpg" alt="A-Line Skirt">
+                    <div class="product-info">
+                        <h2>Botton Skirt</h2>
+                        <p class="description">Botton skirt that flatters every figure.</p>
+                        <p class="price">Price: £30</p>
+                        <button class="add-to-cart" data-name="Skirt" data-price="30">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/skirt6.jpg" alt="Wrap Skirt">
+                    <div class="product-info">
+                        <h2>Flair Skirt</h2>
+                        <p class="description">Stylish flair skirt for a chic look.</p>
+                        <p class="price">Price: £30</p>
+                        <button class="add-to-cart" data-name="Skirt" data-price="35">Add to Cart</button> 
+                    </div>
+                </div>
+            </div>
+          </section>
+            <section class="image-grid-section"></section>
+            <h1>Jumpsuits and Summer Collection</h1>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="images/jumpsuite.webp" alt="Elegant Jumpsuit">
+                    <div class="product-info">
+                        <h2>Elegant Jumpsuit</h2>
+                        <p class="description">An elegant jumpsuit perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                        <p class="price">Price: £30</p>
+                        <button class="add-to-cart" data-name="jumpsuit" data-price="30">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/summer girlies.JPG" alt="Summer Girlies">
+                    <div class="product-info">
+                        <h2>Summer Girlies</h2>
+                        <p class="description">Light and breezy summer gown ideal for hot weather. Embrace the summer vibes with this stylish piece.</p>
+                        <p class="price">Price: £35</p>
+                        <button class="add-to-cart" data-name="Summer" data-price="35">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/summer.JPG" alt="Summer Gown">
+                    <div class="product-info">
+                        <h2>Summer Gown</h2>
+                        <p class="description">Comfortable and versatile summer gown. Perfect for daily wear or a casual day out.</p>
+                        <p class="price">Price: £35</p>
+                        <button class="add-to-cart" data-name="Summer" data-price="35">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/jumpsuit 1.webp" alt="Chic Jumpsuit">
+                    <div class="product-info">
+                        <h2>Chic Jumpsuit</h2>
+                        <p class="description">Chic and fashionable, this jumpsuit is a must-have for any wardrobe. Great for special occasions or a night out.</p>
+                        <p class="price">Price: £35</p>
+                        <button class="add-to-cart" data-name="jumpsuit" data-price="35">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="images/jumpsuit 2.webp" alt="Casual Jumpsuit">
+                    <div class="product-info">
+                        <h2>Casual Jumpsuit</h2>
+                        <p class="description">Easy-going and casual, this jumpsuit is perfect for a relaxed day. Designed with comfort and style in mind.</p>
+                        <p class="price">Price: £35</p>
+                        <button class="add-to-cart" data-name="jumpsuit" data-price="35">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <div id="cart-modal" class="cart-modal">
+              <div class="cart-content">
+                  <span class="close" onclick="toggleCart()">&times;</span>
+                  <h2>Your Cart</h2>
+                  <div id="cart-items"></div>
+                  <div id="empty-cart-message" style="display:none;">
+                      <p>Your cart is empty</p>
+                      <a href="#">Continue shopping</a>
+                      <p>Have an account? <a href="#" onclick="showLoginForm()">Log in to check out faster.</a></p>
+                  </div>
+                  <div id="cart-total">
+                      <p>Total: £<span id="cart-total-price"></span></p>
+                      <button id="checkout-button">Proceed to Checkout</button>
+                  </div>
+              </div>
+          </div>
+      </main>
+    <section class="about-us" id="about-us" style="display:none;">
             <h2>About Us</h2>
             <p>My name is Fauzeeyah, and I am the face behind Soft Apparel. When I immigrated to the UK, I brought with me a deep appreciation for modest fashion. However, adjusting to my new surroundings, I encountered an unexpected challenge: finding clothing that aligned with my fabric preferences and modesty standards. The local shops were dominated by fast fashion, none of which appealed to me.</p>
             <p>Determined to stay true to my values, I began searching for fabrics reminiscent of home soft cottons, luxurious silks, and intricate patterns. Yet, sourcing these materials was difficult. The local markets didn't have suitable options, and online choices were often overwhelming and disappointing.</p>
@@ -79,6 +193,7 @@
             <p>To ensure the perfect fit, we recommend carefully selecting your size based on the size guides provided below. We also offer customization for sizing; if you need this service, please include your Bust, High Waist, and Full Length measurements (in centimeters) in the 'Order Notes' box before checking out.</p>
             <p>Need help with sizing? Feel free to send us a direct message on Instagram, or chat with us on WhatsApp at 07510749031.</p>
             <h3>Conversion Chart</h3>
+            <table class="excel-table">
             <table>
                 <tr>
                     <th>Soft Apparel Size</th>
@@ -126,9 +241,9 @@
                     <td>18</td>
                 </tr>
             </table>
-            
-                <h3>Size Chart</h3>
-                <p>Measurements in inches</p>
+            <h3>Size Chart</h3>
+            <p>Measurements in inches</p>
+            <table class="excel-table">
                 <table>
                     <tr>
                         <th>Size</th>
@@ -220,20 +335,20 @@
             <div class="footer-section">
                 <h4>Customer Service</h4>
                 <ul>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Returns & Exchanges</a></li>
-                  <li><a href="#">Shipping Information</a></li>
-                  <li><a href="#">FAQs</a></li>
+                    <li><a href="#" onclick="showContent('contact-us')">Contact Us</a></li>
+                    <li><a href="#" onclick="showContent('returns-exchanges')">Returns & Exchanges</a></li>
+                    <li><a href="#" onclick="showContent('shipping-info')">Shipping Information</a></li>
+                    <li><a href="#" onclick="showContent('faqs')">FAQs</a></li>
                 </ul>
               </div>
               
               <div class="footer-section">
                 <h4>Legal</h4>
                 <ul>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Cookie Policy</a></li>
-                  <li><a href="#">Accessibility Statement</a></li>
+                    <li><a href="#" onclick="showContent('privacy-policy')">Privacy Policy</a></li>
+                    <li><a href="#" onclick="showContent('terms-service')">Terms of Service</a></li>
+                    <li><a href="#" onclick="showContent('cookie-policy')">Cookie Policy</a></li>
+                    <li><a href="#" onclick="showContent('accessibility-statement')">Accessibility Statement</a></li>
                 </ul>
               </div>
               
@@ -273,11 +388,11 @@
                   <p>&copy; Soft Apparel. All rights reserved.</p>
                 </div>
               </div>
+            </main>
           </footer>
-          <script src="index.js"></script>
-          <script src="login.js"></script>
+          <script src="/js folder/index.js"></script>
+          <script src="/js folder/login.js"></script>
       </body>
       </html>
 
-        </body>
-        </html>
+        
