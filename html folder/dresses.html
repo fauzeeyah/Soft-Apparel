@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dresses - Soft Apparel</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="announcement-bar">
@@ -37,11 +38,11 @@
                 <img src="images/soft Apparel.JPG" alt="Soft Apparel Logo">
             </div>
             <div class="nav-right search-login">
-                <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#" id="login-icon" onclick="showLoginForm()"><i class="fa fa-user"></i></a>
-                <a href="#" id="cart-icon">
+                <a href="/html folder/search.html"><i class="fa fa-search"></i></a>
+                <a href="/html folder/login.html" id="login-icon" onclick="showLoginForm()"><i class="fa fa-user"></i></a>
+                <a href="/html folder/cart.html" id="cart-icon">
                     <i class="fa fa-shopping-cart"></i>
-                    <span id="cart-count" class="cart-count"></span>
+                    <span id="cart-count" class="cart-count">0</span>
                 </a>
             </div>
         </nav>
@@ -50,11 +51,12 @@
         <h1>Dresses Collection</h1>
         <div class="image-grid">
             <div class="image-item">
-                <img src="images/Dresses.JPG" alt="Dress 1">
+                <img src="images/Boubou.JPG" alt="Dress 1">
                 <div class="product-info">
                     <h2>Pearl Gown</h2>
                     <p class="price">£35 GBP</p>
                     <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
                 </div>
             </div>
             <div class="image-item">
@@ -63,6 +65,7 @@
                     <h2>Pearl Gown</h2>
                     <p class="price">£35 GBP</p>
                     <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
                 </div>
             </div>
             <div class="image-item">
@@ -71,6 +74,7 @@
                     <h2>Pearl Gown</h2>
                     <p class="price">£35 GBP</p>
                     <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
                 </div>
             </div>
             <div class="image-item">
@@ -79,10 +83,46 @@
                     <h2>Pearl Gown</h2>
                     <p class="price">£35 GBP</p>
                     <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/Dresses.JPG" alt="Dress 1">
+                <div class="product-info">
+                    <h2>Pearl Gown</h2>
+                    <p class="price">£35 GBP</p>
+                    <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/Mom and me.JPG" alt="Dress 1">
+                <div class="product-info">
+                    <h2>Pearl Gown</h2>
+                    <p class="price">£35 GBP</p>
+                    <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/Zipper.JPG" alt="Dress 1">
+                <div class="product-info">
+                    <h2>Pearl Gown</h2>
+                    <p class="price">£35 GBP</p>
+                    <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/mum and the girls.JPG" alt="Dress 1">
+                <div class="product-info">
+                    <h2>Pearl Gown</h2>
+                    <p class="price">£35 GBP</p>
+                    <p class="description">Structured front zipper statement. Faiza will have you feeling elegant. It features pleat detailing and a simple neckline.</p>
+                    <button class="add-to-cart" data-price="35">Add to Cart</button>
                 </div>
             </div>
         </div>
-
         <div class="custom-options">
             <h3>Custom Option</h3>
             <p>For more color options and size, Kindly Follow The Steps Below:</p>
@@ -157,5 +197,7 @@
     </footer>
     <script src="/js folder/index.js"></script>
     <script src="/js folder/login.js"></script>
+    <script src="/js folder/cart.js"></script>
+    
 </body>
 </html>

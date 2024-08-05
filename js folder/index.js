@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutUsSection = document.getElementById('about-us');
     const sizeGuideSection = document.getElementById('size-guide');
     const imageDisplaySection = document.getElementById('image-display-section');
-    const cart = [];
 
     // Navigation toggle
     if (navToggle && navLinks) {
@@ -67,14 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Section navigation functionality
-    //document.querySelectorAll('.nav-links a').forEach(link => {
-       // link.addEventListener('click', (event) => {
-          //  event.preventDefault();
-           //// const sectionId = link.getAttribute('href').substring(1);
-           // showSection(sectionId);
-      //  });
-  //  });
-
     function showSection(sectionId) {
         document.querySelectorAll('main section').forEach(section => {
             section.style.display = 'none';
@@ -84,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutUsSection.style.display = 'block';
         } else if (sectionId === 'size-guide' && sizeGuideSection) {
             sizeGuideSection.style.display = 'block';
-        } else if (sectionId === 'cart') {
-            showCart();
         } else {
             document.getElementById(sectionId).style.display = 'block';
         }
@@ -93,58 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (aboutUsSection) aboutUsSection.style.display = 'none';
     if (sizeGuideSection) sizeGuideSection.style.display = 'none';
-
-    // Cart functionality
-    function addToCart(product) {
-        cart.push(product);
-        updateCartDisplay();
-        alert('Product added to cart!');
-    }
-
-    function updateCartDisplay() {
-        const cartCount = document.getElementById('cart-count');
-        const cartItems = document.getElementById('cart-items');
-        const emptyCartMessage = document.getElementById('empty-cart-message');
-
-        cartCount.textContent = cart.length;
-
-        if (cart.length === 0) {
-            cartItems.style.display = 'none';
-            emptyCartMessage.style.display = 'block';
-        } else {
-            cartItems.style.display = 'block';
-            emptyCartMessage.style.display = 'none';
-
-            cartItems.innerHTML = '';
-            cart.forEach((product, index) => {
-                const cartItem = document.createElement('div');
-                cartItem.classList.add('cart-item');
-                cartItem.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}">
-                    <div class="cart-item-details">
-                        <span>${product.name}</span>
-                        <span class="cart-item-price">${product.price}</span>
-                    </div>
-                    <span class="remove-item" onclick="removeFromCart(${index})">&times;</span>
-                `;
-                cartItems.appendChild(cartItem);
-            });
-        }
-    }
-
-    window.removeFromCart = function(index) {
-        cart.splice(index, 1);
-        updateCartDisplay();
-    }
-
-    window.continueShopping = function() {
-        document.querySelector('header nav .nav-left a:first-child').click();
-    }
-
-    window.showCart = function() {
-        showSection('cart');
-        updateCartDisplay();
-    }
 
     // Image display functionality
     window.showImages = function(category) {
@@ -163,15 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/dress1.jpg',
                 'images/dress2.jpg',
                 'images/Dresses.JPG',
-               'images/RR DRESS.webp' ,
-              'images/Pearl dress.webp' ,
-            ' images/Aminah dress.mp4' , 
+                'images/RR DRESS.webp' ,
+                'images/Pearl dress.webp' ,
+                'images/Aminah dress.mp4',
             ],
             jumpsuite: [
                 'images/jumpsuite.jpg',
                 'images/summer girlies.jpg',
                 'images/summer.jpg',
-
                 // Add more image paths here
             ],
             bodytop: [
@@ -222,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// scripts.js
 
 let cart = [];
 const cartModal = document.getElementById('cart-modal');
@@ -234,19 +169,9 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', function() {
         const name = this.getAttribute('data-name');
         const price = parseFloat(this.getAttribute('data-price'));
-        addToCart(name, price);
+        addToCart(name, price); // Note: Ensure this function is defined in cart.js
     });
 });
-
-function addToCart(name, price) {
-    const itemIndex = cart.findIndex(item => item.name === name);
-    if (itemIndex === -1) {
-        cart.push({ name, price, quantity:  1});
-    } else {
-        cart[itemIndex].quantity++;
-    }
-    updateCartUI();
-}
 
 function updateCartUI() {
     cartItemsContainer.innerHTML = '';
@@ -277,46 +202,4 @@ function toggleCart() {
         cartModal.style.display = 'block';
     }
 }
-// cart.js
 
-// Function to get cart items from localStorage
-function getCartItems() {
-    return JSON.parse(localStorage.getItem('cartItems')) || [];
-}
-
-// Function to update cart count
-function updateCartCount() {
-    const cartItems = getCartItems();
-    const cartCount = cartItems.reduce((count, item) => count + item.quantity, 0);
-    document.getElementById('cart-count').textContent = cartCount;
-}
-
-// Function to add item to cart
-function addToCart(name, price) {
-    const cartItems = getCartItems();
-    const existingItem = cartItems.find(item => item.name === name);
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cartItems.push({ name, price, quantity: 1 });
-    }
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    updateCartCount();
-}
-
-// Function to remove item from cart
-function removeFromCart(name) {
-    let cartItems = getCartItems();
-    cartItems = cartItems.filter(item => item.name !== name);
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    updateCartCount();
-}
-
-// Function to calculate total price
-function calculateTotalPrice() {
-    const cartItems = getCartItems();
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-}
-
-// Initialize cart count on page load
-document.addEventListener('DOMContentLoaded', updateCartCount);
