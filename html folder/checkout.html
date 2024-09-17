@@ -22,7 +22,7 @@
                             <a href="/html folder/jilbabs.html"><span>Jilbabs</span></a>
                             <a href="/html folder/hijabs.html"><span>Hijabs</span></a>
                             <a href="/html folder/dresses.html"><span>Dresses</span></a>
-                            <a href="/html folder/jumpsuits.html"><span>Jumpsuits</span></a>
+                            <a href="/html folder/jumpsuits.html"><span>Summer</span></a>
                             <a href="/html folder/tops.html"><span>Tops</span></a>
                             <a href="/html folder/skirts.html"><span>Skirts</span></a>
                             <a href="/html folder/kids.html"><span>Kids</span></a>
@@ -35,10 +35,15 @@
                 </ul>
             </div>
             <div class="nav-center logo">
-                <img src="images/soft Apparel.JPG" alt="Soft Apparel Logo">
+                <a href="/html folder/jumpsuits.html">
+                    <img src="images/soft Apparel.JPG" alt="Soft Apparel Logo">
+                </a>
             </div>
             <div class="nav-right search-login">
-                <a href="/html folder/search.html"><i class="fa fa-search"></i></a>
+                <form id="search-form" class="search-login">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+                </form>
                 <a href="/html folder/login.html" id="login-icon" onclick="showLoginForm()"><i class="fa fa-user"></i></a>
                 <a href="/html folder/cart.html" id="cart-icon">
                     <i class="fa fa-shopping-cart"></i>
@@ -75,11 +80,11 @@
                 <div class="payment-options">
                     <label>
                         <input type="radio" name="payment-method" value="credit-card" required>
-                        <img src="https://via.placeholder.com/50x30.png?text=Credit+Card" alt="Credit Card">
+                        <img src="images/creditcard logo.png" alt="credit-card">
                     </label>
                     <label>
                         <input type="radio" name="payment-method" value="paypal">
-                        <img src="https://via.placeholder.com/50x30.png?text=PayPal" alt="PayPal">
+                        <img src="images/paypal.png" alt="PayPal">
                     </label>
                 </div>
             </div>

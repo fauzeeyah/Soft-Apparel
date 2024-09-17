@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cache DOM elements
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-    const searchButton = document.getElementById('search-button');
+    const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     const footerSubscribeButton = document.getElementById('footer-subscribe-button');
@@ -19,9 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Search button functionality
-    if (searchButton && searchInput) {
-        searchButton.addEventListener('click', () => {
-            alert(`Search query: ${searchInput.value}`);
+    if (searchForm && searchInput) {
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const query = searchInput.value.trim().toLowerCase();
+            if (query) {
+                performSearch(query);
+            }
         });
     }
 
@@ -139,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const selectedImages = images[category] || [];
         imageDisplaySection.innerHTML = selectedImages.map(src => `<img src="${src}" alt="${category}">`).join('');
-        show('image-display-section');
+        showSection('image-display-section');
     }
 
     // Footer content display functionality
@@ -157,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
 
 let cart = [];
 const cartModal = document.getElementById('cart-modal');
@@ -203,3 +206,16 @@ function toggleCart() {
     }
 }
 
+function performSearch(query) {
+    const items = document.querySelectorAll(".image-item");
+    items.forEach(item => {
+        const title = item.querySelector("h2").innerText.toLowerCase();
+        const description = item.querySelector(".description").innerText.toLowerCase();
+        
+        if (title.includes(query) || description.includes(query)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
