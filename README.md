@@ -41,8 +41,8 @@ This project is an HTML, CSS, and JavaScript-based static website for Soft Appar
 ### Cloning the Repository
 
 To get started with the project, clone this repository using:
+https://github.com/fauzeeyah/Soft-Apparel
 
-git clone https://github.com/your-username/Soft-Apparel.gitUsage
 
 ### Usage
 Search Products: Use the search bar in the header to search for products by keywords.
