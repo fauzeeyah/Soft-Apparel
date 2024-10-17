@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpsuits - Soft Apparel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="announcement-bar">
+      <span id="scrolling-text">&lt;&nbsp;&nbsp; Delivery Takes Between 8-12 Days | Express Shipping Available&nbsp;&nbsp;&gt;</span>
+  </div>
+  <header>
+    <nav>
+      <div class="nav-left">
+          <ul class="nav-links">
+              <li><a href="/html folder/home.html"><span>Home</span></a></li>
+              <li class="dropdown">
+                  <a href="#"><span>Shop</span></a>
+                  <div class="dropdown-content">
+                      <a href="/html folder/jilbabs.html"><span>Jilbabs</span></a>
+                      <a href="/html folder/hijabs.html"><span>Hijabs</span></a>
+                      <a href="/html folder/dresses.html"><span>Dresses</span></a>
+                      <a href="/html folder/jumpsuits.html"><span>Summer</span></a>
+                      <a href="/html folder/tops.html"><span>Tops</span></a>
+                      <a href="/html folder/skirts.html"><span>Skirts</span></a>
+                      <a href="/html folder/kids.html"><span>Kids</span></a>
+                      <a href="/html folder/prayer_garments.html"><span>Prayer Garments</span></a>
+                      <a href="/html folder/gifting_options.html"><span>Gifting Options</span></a>
+                  </div>
+              </li>
+              <li><a href="/html folder/about_us.html"><span>About Us</span></a></li>
+              <li><a href="/html folder/size_guide.html"><span>Size Guide</span></a></li>
+          </ul>
+      </div>
+      <div class="nav-center logo">
+        <a href="/html folder/jumpsuits.html">
+            <img src="images/soft Apparel.JPG" alt="Soft Apparel Logo">
+        </a>
+      </div>
+      <div class="nav-right search-login">
+        <form id="search-form" class="search-login">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+        </form>
+          <a href="/html folder/login.html" id="login-icon" onclick="showLoginForm()"><i class="fa fa-user"></i></a>
+          <a href="/html folder/cart.html" id="cart-icon">
+              <i class="fa fa-shopping-cart"></i>
+              <span id="cart-count" class="cart-count"></span>
+          </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+      <h1>Summer Collections</h1>
+      <div class="image-grid">
+          <div class="image-item">
+              <img src="images/jumpsuite.webp" alt="Elegant Jumpsuit">
+              <div class="product-info">
+                  <h2>Elegant Jumpsuit</h2>
+                  <p class="description">An elegant jumpsuit perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £30</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/Adire (1).JPG" alt="Elegant Gown">
+              <div class="product-info">
+                  <h2>Elegant Gown</h2>
+                  <p class="description">An elegant gown perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £30</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/Adire (2).JPG" alt="Elegant Gown">
+              <div class="product-info">
+                  <h2>Elegant Gown</h2>
+                  <p class="description">An elegant gown perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £30</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button> 
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/Adire (3).JPG" alt="Elegant Gown">
+              <div class="product-info">
+                  <h2>Elegant Gown</h2>
+                  <p class="description">An elegant gown perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £40</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/African prints.JPG" alt="Elegant Gown">
+              <div class="product-info">
+                  <h2>Elegant Gown</h2>
+                  <p class="description">An elegant gown perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £45</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/African prints2.JPG" alt="Two Piece">
+              <div class="product-info">
+                  <h2>Two Piece</h2>
+                  <p class="description">An elegant two-piece perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £45</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/summer girlies.JPG" alt="Summer Girlies">
+              <div class="product-info">
+                  <h2>Summer Girlies</h2>
+                  <p class="description">Light and breezy summer gown ideal for hot weather. Embrace the summer vibes with this stylish piece.</p>
+                  <p class="price">Price: £35</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/summer.JPG" alt="Summer Gown">
+              <div class="product-info">
+                  <h2>Summer Gown</h2>
+                  <p class="description">Comfortable and versatile summer gown. Perfect for daily wear or a casual day out.</p>
+                  <p class="price">Price: £35</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/jumpsuit 1.webp" alt="Chic Jumpsuit">
+              <div class="product-info">
+                  <h2>Chic Jumpsuit</h2>
+                  <p class="description">Chic and fashionable, this jumpsuit is a must-have for any wardrobe. Great for special occasions or a night out.</p>
+                  <p class="price">Price: £35</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/African prints3.JPG" alt="Gorgeous Look">
+              <div class="product-info">
+                  <h2>Gorgeous Look</h2>
+                  <p class="description">An elegant attire perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £50</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/Fringe Adire.JPG" alt="Gorgeous Look">
+              <div class="product-info">
+                  <h2>Gorgeous Look</h2>
+                  <p class="description">An elegant attire perfect for both casual and formal events. Features a sleek design and comfortable fit.</p>
+                  <p class="price">Price: £50</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/African Prints4.JPG" alt="Gorgeous Look">
+              <div class="product-info">
+                  <h2>Gorgeous Look</h2>
+                  <p class="description">An elegant attire perfect for both casual and formal events. Features a sleek design and comfortable fit</p>
+                  <p class="price">Price: £50</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button>
+              </div>
+          </div>
+          <div class="image-item">
+              <img src="images/jumpsuit 2.webp" alt="Casual Jumpsuit">
+              <div class="product-info">
+                  <h2>Anike Jumpsuit</h2>
+                  <p class="description">Easy-going and casual, this jumpsuit is perfect for a relaxed day. Designed with comfort and style in mind.</p>
+                  <p class="price">Price: £35</p>
+                  <button class="add-to-cart" data-price="30">Add to Cart</button> 
+              </div>
+          </div>
+      </div>
+      <section class="custom-options">
+          <h2>Custom Options</h2>
+          <p>For more color options and sizes, kindly follow the steps below:</p>
+          <ol>
+              <li>Select custom color or/and custom size.</li>
+              <li>For size, add your size based on your size guide or share your Bust, High Waist, Hip, and Full Length measurements in the “Order Special Instructions” section on your cart page.</li>
+              <li>For colors, share the colors in the “Order Special Instructions” section on your cart page.</li>
+          </ol>
+      </section>
+  </main>
+  <footer>
+      <div class="footer-container">
+          <div class="footer-content">
+              <div class="footer-section about">
+                  <h3>About Us</h3>
+                  <p>Learn more about our mission, vision, and the story behind Soft Apparel.</p>
+              </div>
+              <div class="footer-section support">
+                  <h3>Support</h3>
+                  <ul>
+                      <li><a href="#">Contact Us</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Shipping & Returns</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section social">
+                  <h3>Follow Us</h3>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+      <script src="/js folder/index.js"></script>
+      <script src="/js folder/login.js"></script>
+      <script src="/js folder/cart.js"></script>
+</body>
+</html>

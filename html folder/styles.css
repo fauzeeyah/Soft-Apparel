@@ -1,0 +1,549 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  display: grid;
+  place-items: center;
+  background-color: green;
+  color:white; /* Changed to white for better contrast */
+  padding: 7px 0;
+  font-size: 18px;
+  margin-bottom: 1px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Header */
+header {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  padding: 7px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: goldenrod;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 13px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: goldenrod;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Logo */
+.logo {
+  margin-right: 10px; 
+  text-align: center;
+  
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+  border-radius: 50%; /* Adjusted for a circular logo */
+  
+}
+
+
+/* Search and Login */
+.search-login {
+  display: flex;
+  align-items: center;
+}
+
+.search-login a {
+  margin: 0 10px;
+  color: green;
+  text-decoration: none;
+}
+
+#search-form {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#search-input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+#search-form button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-form button:hover {
+  background-color: goldenrod;
+}
+
+.fa {
+  font-size: 1.5em;
+}
+
+/* Main Content Sections */
+main > section {
+  display: none; /* Initially hidden, will be shown by JS */
+}
+
+.about-us, .size-guide {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: black;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.subscribe form {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  flex: 1;
+}
+
+.subscribe button {
+  padding: 0.5rem;
+  border: none;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.subscribe button i {
+  font-size: 1rem;
+}
+
+/* Currency Flag */
+.currency-flag {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.currency-flag img {
+  width: 24px; /* Adjust size to match other icons */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 3px; /* Optional: Add slight rounding if needed */
+  margin-right: 5px; /* Space between image and text */
+}
+
+.currency-flag span {
+  font-size: 14px; /* Adjust font size to match other text elements */
+  color: black; /* Ensure text color is appropriate */
+}
+
+
+.footer-bottom {
+  border-top: 1px solid green;
+  padding-top: 1rem;
+}
+
+.footer-bottom-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-bottom-text p {
+  margin: 0;
+}
+
+.footer-bottom-text a {
+  color: black; /* Changed to black for better contrast */
+  text-decoration: none;
+}
+
+.footer-bottom-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Image Display */
+.image-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.image-display img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.excel-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.excel-table th,
+.excel-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.excel-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.excel-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.excel-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Product Container */
+.product-container {
+  padding: 20px;
+}
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Responsive columns */
+  gap: 16px; /* Space between grid items */
+  padding: 16px; /* Padding around the grid */
+}
+
+/* Style for each image item */
+.image-item {
+  border: 1px solid #ddd; /* Light border around items */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures images do not overflow container */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for image items */
+.image-item:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Ensure images are responsive */
+.image-item img,
+.image-item video {
+  width: 100%; /* Fill container */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+
+/* Cart Styles */
+.cart-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-details h3 {
+  margin: 0;
+  color: #555;
+}
+
+.item-details p {
+  margin: 5px 0;
+  color: #777;
+}
+
+button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: goldenrod;
+}
+
+.cart-summary {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.cart-summary p {
+  margin: 10px 0;
+}
+
+/* Checkout Styles */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.payment-options {
+  display: flex;
+  gap: 15px;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-options img {
+  width: 50px;
+  height: auto;
+}
+
+button[type="submit"] {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: goldenrod;
+}

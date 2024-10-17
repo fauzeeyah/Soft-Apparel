@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Statement - Soft Apparel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="announcement-bar">
+      <span id="scrolling-text">&lt;&nbsp;&nbsp; Delivery Takes Between 8-12 Days | Express Shipping Available&nbsp;&nbsp;&gt;</span>
+  </div>
+  <header>
+    <nav>
+      <div class="nav-left">
+          <ul class="nav-links">
+              <li><a href="/html folder/home.html"><span>Home</span></a></li>
+              <li class="dropdown">
+                  <a href="#"><span>Shop</span></a>
+                  <div class="dropdown-content">
+                      <a href="/html folder/jilbabs.html"><span>Jilbabs</span></a>
+                      <a href="/html folder/hijabs.html"><span>Hijabs</span></a>
+                      <a href="/html folder/dresses.html"><span>Dresses</span></a>
+                      <a href="/html folder/jumpsuits.html"><span>Summer</span></a>
+                      <a href="/html folder/"><span>Tops</span></a>
+                      <a href="/html folder/skirts.html" ><span>Skirts</span></a>
+                      <a href="/html folder/kids.html" ><span>Kids</span></a>
+                      <a href="/html folder/prayer_garments.html"><span>Prayer Garments</span></a>
+                      <a href="/html folder/gifting_options.html"><span>Gifting Options</span></a>
+                  </div>
+              </li>
+              <li><a href="/html folder/about_us.html"><span>About Us</span></a></li>
+              <li><a href="/html folder/size_guide.html"><span>Size Guide</span></a></li>
+          </ul>
+          </div>
+          <div class="nav-center logo">
+            <a href="/html folder/jumpsuits.html">
+              <img src="images/soft Apparel.JPG" alt="Soft Apparel Logo">
+          </a>
+          </div>
+          <div class="nav-right search-login">
+            <form id="search-form" class="search-login">
+              <input type="text" id="search-input" placeholder="Search products...">
+              <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+          </form>
+              <a href="/html folder/login.html" id="login-icon" onclick="showLoginForm()"><i class="fa fa-user"></i></a>
+              <a href="/html folder/cart.html" id="cart-icon">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span id="cart-count" class="cart-count"></span>
+              </a>
+          </div>
+      </nav>
+  </header>
+  <main>
+        <h1>Accessibility Statement</h1>
+        <p>We are committed to making our website accessible to everyone. Read our accessibility statement for more information.</p>
+    <footer>
+      <div class="footer-container">
+          <div class="footer-top">
+                  <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                      <li><a href="#">Search</a></li>
+                      <li><a href="#">Refund Policy</a></li>
+                      <li><a href="#">Shipping Policy</a></li>
+                      <li><a href="#size-guide" onclick="showSection('size-guide')">Size Guide</a></li>
+                    </ul>
+                  </div>
+          </div>
+          <div class="footer-section">
+              <h4>Customer Service</h4>
+              <ul>
+                  <li><a href="#" onclick="showContent('contact-us')">Contact Us</a></li>
+                  <li><a href="#" onclick="showContent('returns-exchanges')">Returns & Exchanges</a></li>
+                  <li><a href="#" onclick="showContent('shipping-info')">Shipping Information</a></li>
+                  <li><a href="#" onclick="showContent('faqs')">FAQs</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <h4>Legal</h4>
+              <ul>
+                  <li><a href="#" onclick="showContent('privacy-policy')">Privacy Policy</a></li>
+                  <li><a href="#" onclick="showContent('terms-service')">Terms of Service</a></li>
+                  <li><a href="#" onclick="showContent('cookie-policy')">Cookie Policy</a></li>
+                  <li><a href="#" onclick="showContent('accessibility-statement')">Accessibility Statement</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <h4>Connect With Us</h4>
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+            <div class="footer-section subscribe">
+              <h4>Subscribe to Our Emails</h4>
+              <form action="#">
+                <input type="email" placeholder="Email" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+              </form>
+              <div class="currency-selector">
+                <select>
+                  <option value="United Kingdom">United Kingdom</option>
+                </select>
+              </div>
+              <div class="currency-flag">
+                <img src="images/Uk flag.png" alt="UK Flag">
+                <span>GBP</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="footer-bottom-text">
+            <p>© 2024, Soft Apparel. Elegance in Comfort, Modest by Design.</p>
+          </div>
+          <div class="footer-bottom">
+              <div class="footer-bottom-text">
+                <p>&copy; Soft Apparel. All rights reserved.</p>
+              </div>
+            </div>
+          </main>
+        </footer>
+        <script src="/js folder/cart.js"></script>
+        <script src="/js folder/index.js"></script>
+        <script src="/js folder/login.js"></script>
+    </body>
+    </html>
+
